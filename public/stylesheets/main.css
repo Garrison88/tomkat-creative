@@ -1,0 +1,114 @@
+.vert-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
+/*#header-image {*/
+/*  background-image: url('/img/header.png');*/
+/*}*/
+
+li a {
+  transition: all 250ms ease;
+  color: #367a7a;
+  /*display: inline-block;*/
+  font-size: x-large;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+li a:hover,
+li a:focus,
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  transition: all 250ms ease;
+  color: white;
+  /*display: inline-block;*/
+  font-size: x-large;
+  background-color: #f48484;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+.full-body {
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+#home-background {
+  background-image: url('/img/thierry.gif');
+  background-color: #f5cbb7;
+}
+#work-background {
+  /*background-image: url('/img/black-girl.png');*/
+  background-color: #fbd1c0;
+}
+
+#contact-background {
+  background-image: url('/img/black-girl.png');
+  /*background-image: url('/img/blue-girl.png');*/
+  background-color: #b2d2d1;
+}
+
+#social-bar {
+    font-size: 3em;
+    list-style-type: none;
+    padding: 0;
+}
+
+#social-bar li {
+    display: inline;
+    padding: 0 10px 0 10px;
+}
+/*===========================*/
+/*FULLSCREEN BACKGROUND VIDEO*/
+/*===========================*/
+
+/*.fullscreen-bg {*/
+/*    position: fixed;*/
+/*    top: 0;*/
+/*    right: 0;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    overflow: hidden;*/
+/*    z-index: -100;*/
+/*}*/
+
+/*.fullscreen-bg__video {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    left: 50%;*/
+/*    width: auto;*/
+/*    height: auto;*/
+/*    min-width: 100%;*/
+/*    min-height: 100%;*/
+/*    -webkit-transform: translate(-50%, -50%);*/
+/*       -moz-transform: translate(-50%, -50%);*/
+/*        -ms-transform: translate(-50%, -50%);*/
+/*	    transform: translate(-50%, -50%);*/
+/*}*/
+
+/*@media (max-width: 767px) {*/
+/*    .fullscreen-bg {*/
+/*        background: url('http://dev2.slicejack.com/fullscreen-video-demo/img/videoframe.jpg') center center / cover no-repeat;*/
+/*    }*/
+
+/*    .fullscreen-bg__video {*/
+/*        display: none;*/
+/*    }*/
+/*}*/
