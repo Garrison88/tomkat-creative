@@ -1,44 +1,11 @@
-.vert-center {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
+@import "gallery.css";
 
-
-
-/*#header-image {*/
-/*  background-image: url('/img/header.png');*/
-/*}*/
-
-li a {
-  transition: all 250ms ease;
-  color: #367a7a;
-  /*display: inline-block;*/
-  font-size: x-large;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-li a:hover,
-li a:focus,
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
-  transition: all 250ms ease;
-  color: white;
-  /*display: inline-block;*/
-  font-size: x-large;
-  background-color: #f48484;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
-
-a,
-a:focus,
-a:hover {
-  color: #fff;
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  /*overflow: hidden;*/
+  /*padding-bottom: 20px;*/
 }
 
 .full-body {
@@ -50,65 +17,142 @@ a:hover {
   background-position: center;
 }
 
+.vert-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+  /*======*/
+ /*HEADER*/
+/*======*/
+
+/*prevents page jump when loading banner*/
+
+/*.banner-container {*/
+/*  position: relative;*/
+/*  padding-bottom: 35.9%;*/
+/*  height: 0;*/
+/*  overflow: hidden;*/
+  /*width: 50%;*/
+  /*margin: 0 50px;*/
+/*}*/
+
+.banner-container img {
+  width: 50%;
+}
+
+  /*==========*/
+ /*NAVIGATION*/
+/*==========*/
+
+/*.nav a:hover { color: #fff !important; }*/
+
+.nav {
+  padding-bottom: 20px;
+}
+
+.nav a:hover,
+.nav a:focus,
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  transition: all 250ms ease;
+  color: white;
+  background-color: #f48484;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #007876;
+}
+
+  /*=========*/
+ /*HOME PAGE*/
+/*=========*/
+
 #home-background {
-  background-image: url('/img/thierry.gif');
+  background-image: url('/img/testb.gif');
   background-color: #f5cbb7;
 }
+
+  /*=========*/
+ /*WORK PAGE*/
+/*=========*/
+
 #work-background {
-  /*background-image: url('/img/black-girl.png');*/
+  /*background-image: url('/img/thierry.gif');*/
   background-color: #fbd1c0;
 }
 
+/*see gallery.css for gallery images*/
+
+/*#gallery {*/
+/*  position: relative;*/
+/*  overflow:auto;*/
+/*  width:200%; */
+/*  margin-left: -50%;*/
+/*  padding: 20px 0;*/
+/*  border-top: 20px;*/
+/*}*/
+
+  /*============*/
+ /*CONTACT PAGE*/
+/*============*/
+
 #contact-background {
-  background-image: url('/img/black-girl.png');
-  /*background-image: url('/img/blue-girl.png');*/
+  /*background-image: url('/img/black-girl.png');*/
+  /*background-image: url('/img/dolphintest.gif');*/
   background-color: #b2d2d1;
 }
 
 #social-bar {
-    font-size: 3em;
+    /*font-size: 3em;*/
     list-style-type: none;
     padding: 0;
 }
 
-#social-bar li {
+#social-bar li,
+#social-bar a {
+  color: #232323;
+  background: none;
     display: inline;
     padding: 0 10px 0 10px;
 }
-/*===========================*/
-/*FULLSCREEN BACKGROUND VIDEO*/
-/*===========================*/
 
-/*.fullscreen-bg {*/
-/*    position: fixed;*/
-/*    top: 0;*/
-/*    right: 0;*/
-/*    bottom: 0;*/
-/*    left: 0;*/
-/*    overflow: hidden;*/
-/*    z-index: -100;*/
-/*}*/
+  /*======*/
+ /*FOOTER*/
+/*======*/
 
-/*.fullscreen-bg__video {*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    left: 50%;*/
-/*    width: auto;*/
-/*    height: auto;*/
-/*    min-width: 100%;*/
-/*    min-height: 100%;*/
-/*    -webkit-transform: translate(-50%, -50%);*/
-/*       -moz-transform: translate(-50%, -50%);*/
-/*        -ms-transform: translate(-50%, -50%);*/
-/*	    transform: translate(-50%, -50%);*/
-/*}*/
+.footer {
+  position:fixed;
+  bottom:0;
+  width:100%;
+  float: right;
+  overflow: auto;
+  height:30px;
+  /*background:rgba(255,255,255,0.5);*/
+}
 
-/*@media (max-width: 767px) {*/
-/*    .fullscreen-bg {*/
-/*        background: url('http://dev2.slicejack.com/fullscreen-video-demo/img/videoframe.jpg') center center / cover no-repeat;*/
-/*    }*/
+  /*==========*/
+ /*RESPONSIVE*/
+/*==========*/
 
-/*    .fullscreen-bg__video {*/
-/*        display: none;*/
-/*    }*/
-/*}*/
+/* Extra small devices (phones, 600px and down) */
+/*@media only screen and (max-width: 600px) {...} */
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 600px) {...} */
+
+/* Medium devices (landscape tablets, 768px and up) */
+/*@media only screen and (min-width: 768px) {...} */
+
+/* Large devices (laptops/desktops, 992px and up) */
+/*@media only screen and (min-width: 992px) {...} */
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/*@media only screen and (min-width: 1200px) {...}*/
+
+::-webkit-scrollbar { 
+    display: none; 
+}
