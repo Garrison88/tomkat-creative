@@ -1,82 +1,94 @@
+  /*==================*/
+ /*INDEX ROUTE STYLES*/
+/*==================*/
+
 /* 2 columns for small devices */
 .square {
-    float: left;
-    position: relative;
-    width: 48%;
-    padding-bottom : 48%; /* = width for a 1:1 aspect ratio */
-    margin: 0.5%;
-    overflow: hidden;
+  float: left;
+  position: relative;
+  width: 48%;
+  padding-bottom : 48%; /* = width for a 1:1 aspect ratio */
+  margin: 0.5%;
+  overflow: hidden;
 }
 
 /* 3 columns for medium devices */
 @media only screen and (min-width: 426px) {
-    .square {
+  .square {
     width: 32.3%;
     padding-bottom : 32.3%;
-    /*margin: 0.5%;*/
-    }
+  }
 }
 /* 4 columns for large devices */
 @media only screen and (min-width: 769px) {
-    .square {
+  .square {
     width: 24%;
     padding-bottom : 24%;
-    /*margin: 0.5%;*/
-    }
-} 
+  }
+}
+
+.bg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
 
 .content {
-    position:absolute;
-    height:80%; /* = 100% - 2*10% padding */
-    width:90%; /* = 100% - 2*5% padding */
-    padding: 10% 5%;
+  position:absolute;
+  height:100%; 
+   /*= 100% - 2*10% padding */
+  width:100%; 
+   /*= 100% - 2*5% padding */
+  /*padding: 5%;*/
 }
 
 .table {
-    display:table;
-    height:100%;
-    width:100%;
+  display:table;
+  height:100%;
+  width:100%;
 }
 
 .table-cell {
-    display:table-cell;
-    vertical-align:middle;
-    height:100%;
-    width:100%;
+  display: table-cell;
+  vertical-align: middle;
+  height: 100%;
+  width: 100%;
 }
 
-.detail-image {
+.table-cell p {
+  color:#000;
+  background: rgba(255,255,255,0.7);
+  margin: 0;
+}
+
+/*#gallery-thumbail:focus {*/
+  /*transition: all 250ms ease;*/
+/*  visibility: visible;*/
+/*  margin: 0;*/
+/*}*/
+
+  /*=================*/
+ /*SHOW ROUTE STYLES*/
+/*=================*/
+
+.main-image {
   height: auto;
   max-width: 100%;
+  outline: none !important;
 }
-  /*================*/
- /*GALLERY CONTENTS*/
-/*================*/
 
-.cell-1 {
-  background-image: url('/img/blue-girl.png');
+/*this centers the title*/
+
+/*#a {*/
+/*    text-align: center;*/
+/*    position: relative;*/
+/*}*/
+
+#b {
+    position: absolute;
 }
-.cell-2 {
-  background-image: url('/img/black-girl.png');
-}
-.cell-3 {
-  background-image: url('/img/bullshittime.png');
-}
-.cell-4 {
-  background-image: url('/img/cloud.png');
-}
-.cell-5 {
-  background-image: url('/img/dogfish.gif');
-}
-.cell-6 {
-  background-image: url('/img/sexy-gif.gif');
-}
-.cell-7 {
-  background-image: url('/img/tomkat-logo.png');
-}
-.cell-8 {
-  background-image: url('/img/testb.gif');
-}
-.cell-9 {
-  background-image: url('/img/yellow-zebra.png');
-}
+
+/*#d {*/
+/*    display: inline-block;*/
+/*}*/

@@ -1,4 +1,4 @@
-<% include ../partials/head %>
+<% include ../../partials/head %>
 
 <body class="text-center full-body">
   
@@ -16,9 +16,24 @@
       </nav>
     </header>
     
+    <hr>
+    
+    
+    
     <div class="container">
-        <img class="detail-img" style="height:auto; max-width:100%" src="<%= projects.imageUrl %>">
+      <div>
+        <div id="b">
+            <span><a href="javascript:history.back()">Go Back</a></span>
+        </div>
+        <div>
+          <h4><%= project.title %></h4>
+        </div>
+      </div>
+        <div>
+          <p><%= project.description %></p>
+        </div>
+      <img class="main-image" src="<%= project.imageUrl %>">
     </div>
     
 <!--final div included in footer.ejs-->
-<% include ../partials/footer %>
+<% include ../../partials/footer %>

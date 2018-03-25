@@ -1,24 +1,48 @@
 var express    = require("express"),
     app        = express(),
     bodyParser = require("body-parser")
-    // mongoose   = require("mongoose")
-    // Project    = require("./models/project")
     
 app.set("view engine", "ejs")
 app.use(express.static(__dirname + "/public"))
 app.use(bodyParser.urlencoded({extended: true}))
     
 var projects = [
-        {title: 'BlueGirl', imageUrl: '/img/blue-girl.png', description: 'Beautiful lady with crazy hair!', thumbUrl: '/img/blue-girl.png'},
-        {title: 'BlackGirl', imageUrl: '/img/black-girl.png', description: 'Dancing gracefully', thumbUrl: '/img/black-girl.png'},
-        {title: 'Zebra', imageUrl: '/img/bullshittime.png', description: 'Stretching down to eat?', thumbUrl: '/img/bullshittime.png'},
-        {title: 'Cloud', imageUrl: '/img/cloud.png', description: 'Little guy raining on everything', thumbUrl: '/img/cloud.png'},
-        {title: 'Dogfish', imageUrl: '/img/dogfish.gif', description: 'Dog pooping itself out', thumbUrl: '/img/dogfish.gif'},
-        {title: 'Dolphin', imageUrl: '/img/dolphintest.gif', description: 'Baaaayyyybbyyy dolphin...', thumbUrl: '/img/dolphintest.gif'},
-        {title: 'Header', imageUrl: '/img/header.png', description: 'You have seen this before', thumbUrl: '/img/header.png'},
-        {title: 'WhiteGirl', imageUrl: '/img/white-girl.png', description: 'This girl needs a gun', thumbUrl: '/img/white-girl.png'},
-        {title: 'YellowZebra', imageUrl: '/img/yellow-zebra.png', description: 'A yellow variant on a good thing', thumbUrl: '/img/yellow-zebra.png'}
-        ]
+    {
+        type: 'animation',
+        title: 'Dolphin',
+        imageUrl: '/img/anim_dolphin.gif',
+        description: 'Baaaayyyybbyyy dolphin...',
+        thumbUrl: '/img/anim_dolphin.gif'
+    },
+    {
+        type: 'animation',
+        title: 'Blue Girl',
+        imageUrl: '/img/blue-girl.png',
+        description: 'In publishing and graphic design, lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document without relying on meaningful content. Replacing the actual content with placeholder text allows designers to design the form of the content before the content itself has been produced.',
+        thumbUrl: '/img/blue-girl.png'
+    },
+    {
+        type: 'web',
+        title: 'DawnAyer.com',
+        imageUrl: '/img/dawn-ayer.png',
+        description: 'Commissioned by dawn ayer COMMUNICATIONS to design and develop a website promoting their services',
+        thumbUrl: '/img/thumbnails/dawn-ayer.png'
+    },
+    {
+        type: 'illustration',
+        title: 'Zebra',
+        imageUrl: '/img/bullshittime.png',
+        description: 'Stretching down to eat?',
+        thumbUrl: '/img/bullshittime.png'
+    },
+    {
+        type: 'animation',
+        title: 'Dogfish',
+        imageUrl: '/img/dogfish.gif',
+        description: 'Dog pooping itself out',
+        thumbUrl: '/img/dogfish.gif'
+    },
+]
 
 // INDEX route 
 app.get('/', function(req, res) {
@@ -26,15 +50,25 @@ app.get('/', function(req, res) {
 })
 
 // gallery INDEX route 
-app.get('/gallery/index', function(req, res) {
-    res.render('gallery/index', {projects: projects})
+app.get('/gallery/:type/index', function(req, res) {
+    switch (req.params.type) {
+        case 'animation':
+            res.render('./gallery/index', {type: req.params.type, projects: projects})
+            break;
+        case 'illustration':
+            res.render('./gallery/index', {type: req.params.type, projects: projects})
+            break;
+        case 'web':
+            res.render('./gallery/index', {type: req.params.type, projects: projects})
+            break;
+    }
 })
 
 // gallery SHOW route
-app.get('/gallery/:title', function(req, res){
-    projects.forEach(function(projects){
-        if (projects.title === req.params.title) {
-          res.render("gallery/show", {projects: projects}) 
+app.get('/gallery/:type/:title', function(req, res){
+    projects.forEach(function(project){
+        if (project.title === req.params.title) {
+            res.render('gallery/' + req.params.type + '/show', {project: project}) 
         }
     })
 })
