@@ -1,31 +1,16 @@
 <% include ./partials/head %>
+<!--initial body and div included in head.ejs-->
 
-  <body class="text-center full-body" id="contact-background">
+  <div class='container' id="contact-wrapper">
+    <h1>Hamilton, ON</h1>
+    <p >Connect with us online or meet up for a coffee</p>
+    <ul id="social-bar">
+        <li><a href="mailto:tomkatcreative@gmail.com"><i class="fas fa-envelope-square"></i></a></li>
+        <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
+        <li><a href="https://www.instagram.com/tomkatcreative/"><i class="fab fa-instagram"></i></a></li>
+        <li><a href="https://goo.gl/maps/4bmVUMdh1bG2"><i class="fas fa-map-marker"></i></a></li>
+    </ul>
+  </div>
 
-    <div class="container">
-      
-      <header>
-          <div class="banner-container">
-            <img src="img/webbanner.svg">
-          </div>
-          <nav class="nav justify-content-center nav-pills">
-                <a class="nav-link" href="/">HOME</a>
-                <a class="nav-link" href="/gallery/index">WORK</a>
-              <!--  <a class="nav-link vert-center" href="/"><span><img src="img/tomkat-logo.png"></span></a>-->
-                <a class="nav-link active" href="/contact">CONTACT</a>
-          </nav>
-      </header>
-
-      <div class='container' id="contact-wrapper">
-        <h1>Hamilton, ON</h1>
-        <p >Connect with us online or meet up for a coffee</p>
-        <ul id="social-bar">
-            <li><a href="mailto:tomkatcreative@gmail.com"><i class="fas fa-envelope-square"></i></a></li>
-            <li><a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a></li>
-            <li><a href="https://www.instagram.com/tomkatcreative/"><i class="fab fa-instagram"></i></a></li>
-            <li><a href="https://goo.gl/maps/4bmVUMdh1bG2"><i class="fas fa-map-marker"></i></a></li>
-        </ul>
-      </div>
-
-    <!--final div included in footer.ejs-->
-    <% include ./partials/footer %>
+<!--final div included in footer.ejs-->
+<% include ./partials/footer %>

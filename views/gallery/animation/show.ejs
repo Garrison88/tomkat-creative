@@ -1,39 +1,28 @@
 <% include ../../partials/head %>
-
-<body class="text-center full-body">
+<!--initial body and div included in head.ejs-->
+    
+  <hr>
   
   <div class="container">
-    
-    <header>
-      <div class="banner-container">
-        <img src="/img/webbanner.svg">
+    <div>
+      <div id="b">
+          <span><a href="javascript:history.back()">Go Back</a></span>
       </div>
-      <nav class="nav justify-content-center nav-pills">
-            <a class="nav-link" href="/">HOME</a>
-            <a class="nav-link" href="/gallery/index">WORK</a>
-          <!--  <a class="nav-link vert-center" href="/"><span><img src="img/tomkat-logo.png"></span></a>-->
-            <a class="nav-link" href="/contact">CONTACT</a>
-      </nav>
-    </header>
-    
-    <hr>
-    
-    
-    
-    <div class="container">
       <div>
-        <div id="b">
-            <span><a href="javascript:history.back()">Go Back</a></span>
-        </div>
-        <div>
-          <h4><%= project.title %></h4>
-        </div>
+        <h4><%= project.title %></h4>
       </div>
-        <div>
-          <p><%= project.description %></p>
-        </div>
-      <img class="main-image" src="<%= project.imageUrl %>">
     </div>
+      <div>
+        <p id="project-description"><%= project.description %></p>
+      </div>
+      <% if (project.videoEmbedUrl) { %>
+    <div class='embed-container'>
+      <iframe src="<%= project.videoEmbedUrl %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+    </div>
+      <% } else { %>
+        <img class="main-image" src="<%= project.imageUrl %>">
+      <% } %>
+  </div>
     
 <!--final div included in footer.ejs-->
 <% include ../../partials/footer %>

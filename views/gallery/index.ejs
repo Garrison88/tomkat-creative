@@ -1,23 +1,9 @@
 <% include ../partials/head %>
-
-<body class="text-center" id="work-background">
-
-  <div class="container">
-    
-    <header>
-        <div class="banner-container">
-          <img src="/img/webbanner.svg">
-        </div>
-        <nav class="nav justify-content-center nav-pills">
-          <a class="nav-link" href="/">HOME</a>
-          <a class="nav-link active" href="/gallery/index">WORK</a>
-        <!--  <a class="nav-link vert-center" href="/"><span><img src="img/tomkat-logo.png"></span></a>-->
-          <a class="nav-link" href="/contact">CONTACT</a>
-        </nav>
-    </header>
+<!--initial body and div included in head.ejs-->
     
     <div style="padding-top:20px">
-      <% projects.forEach(function(project){ %>
+      <h4><%= project.type %></h4>
+      <% project.forEach(function(project){ %>
         <% if (project.type === type) {%>
           <a href="/gallery/<%= type %>/<%= project.title %>">
             <div class="square bg" style="background-image:url('<%= project.thumbUrl %>')">
