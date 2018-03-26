@@ -13,7 +13,7 @@ body {
   top: 0;
   left: 0;
   background-size: cover;
-  background-position: center;
+  /*background-position: center;*/
 }
 
 .vert-center {
@@ -72,7 +72,6 @@ display: block;
   transition: all 250ms ease;
   color: white;
   background-color: #f48484;
-  /*text-transform: uppercase;*/
 }
 
 a {
@@ -85,7 +84,7 @@ a {
 /*=========*/
 
 #home-background {
-  background-image: url('/img/anim_dolphin.gif');
+  background-image: url('/img/thierry.gif');
   background-color: #f5cbb7;
 }
 
@@ -108,7 +107,7 @@ a {
 }
 
 #social-bar {
-    /*font-size: 3em;*/
+    font-size: 3em;
     list-style-type: none;
     padding: 0;
 }

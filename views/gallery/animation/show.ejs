@@ -17,10 +17,10 @@
       </div>
       <% if (project.videoEmbedUrl) { %>
     <div class='embed-container'>
-      <iframe src="<%= project.videoEmbedUrl %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <iframe src='https://<%= project.videoEmbedUrl %>' width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
       <% } else { %>
-        <img class="main-image" src="<%= project.imageUrl %>">
+        <img class="main-image" src="/img/<%= project.image %>">
       <% } %>
   </div>
     

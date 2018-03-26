@@ -9,13 +9,13 @@
           <span><a href="javascript:history.back()">Go Back</a></span>
       </div>
       <div>
-        <h4><%= project.title %></h4>
+        <a href='<%= project.siteUrl %>'><h4><%= project.title %></h4></a>
       </div>
     </div>
       <div>
         <p id="project-description"><%= project.description %></p>
       </div>
-    <img class="main-image" src="<%= project.imageUrl %>">
+    <img class="main-image" src="/img/<%= project.image %>">
   </div>
     
 <!--final div included in footer.ejs-->
