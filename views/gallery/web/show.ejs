@@ -15,7 +15,10 @@
       <div>
         <p id="project-description"><%= project.description %></p>
       </div>
-    <img class="main-image" src="/img/<%= project.image %>">
+    <% project.images.forEach(function(image){ %>
+        <img class="main-image" src="/img/<%= image %>">
+        <hr>
+      <% }) %>
   </div>
     
 <!--final div included in footer.ejs-->

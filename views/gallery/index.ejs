@@ -2,10 +2,9 @@
 <!--initial body and div included in head.ejs-->
     
     <div style="padding-top:20px">
-      <h4><%= project.type %></h4>
-      <% project.forEach(function(project){ %>
+      <% projects.forEach(function(project){ %>
         <% if (project.type === type) {%>
-          <a href="/gallery/<%= type %>/<%= project.title %>">
+          <a href="/gallery/<%= project.type %>/<%= project.title %>">
             <div class="square bg" style="background-image:url('/img/thumbnails/<%= project.thumb %>')">
               <div class="content">
                 <div class="table">

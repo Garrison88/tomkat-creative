@@ -1,7 +1,8 @@
-var express    = require('express'),
-    app        = express(),
-    bodyParser = require('body-parser'),
-    projects   = require('./projects')    
+var express      = require('express'),
+    app          = express(),
+    bodyParser   = require('body-parser'),
+    projects     = require('./projects')
+    // projects     = JSON.parse(projectsJSON)
     
 app.set("view engine", "ejs")
 app.use(express.static(__dirname + '/public'))
@@ -17,8 +18,9 @@ app.get('/', function(req, res) {
 
 // gallery INDEX route 
 app.get('/gallery/:type/index', function(req, res) {
+    // console.log(projects)
     res.render('./gallery/index', {type: req.params.type,
-                                   project: projects,
+                                   projects: projects,
                                    homeActive: '',
                                    galleryActive: 'active',
                                    contactActive: '',

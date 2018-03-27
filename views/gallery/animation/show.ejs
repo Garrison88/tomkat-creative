@@ -15,10 +15,13 @@
       <div>
         <p id="project-description"><%= project.description %></p>
       </div>
-      <% if (project.videoEmbedUrl) { %>
+      <% if (project.videoEmbedUrls) { %>
+      <% project.videoEmbedUrls.forEach(function(videoEmbedUrl){ %>
     <div class='embed-container'>
-      <iframe src='https://<%= project.videoEmbedUrl %>' width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      <iframe src='https://<%= videoEmbedUrl %>' width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
     </div>
+    <hr>
+    <% }) %>
       <% } else { %>
         <img class="main-image" src="/img/<%= project.image %>">
       <% } %>
