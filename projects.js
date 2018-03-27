@@ -3,7 +3,7 @@ var projects = [
         {
         type: 'animation',
         title: 'Abstract Film',
-        image: 'sexy-film.gif',
+        images: ['sexy-film.gif'],
         description: 'Abstract sexy gif',
         thumb: 'sexy-film.png'
     },
@@ -17,7 +17,7 @@ var projects = [
         {
         type: 'animation',
         title: 'Dolphin',
-        image: 'anim_dolphin.gif',
+        images: ['anim_dolphin.gif'],
         description: 'Baaaayyyybbyyy dolphin...!',
         thumb: 'dolphin.gif'
     },
