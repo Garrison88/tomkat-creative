@@ -31,17 +31,6 @@ display: block;
  /*HEADER*/
 /*======*/
 
-/*prevents page jump when loading banner*/
-
-/*.banner-container {*/
-/*  position: relative;*/
-/*  padding-bottom: 35.9%;*/
-/*  height: 0;*/
-/*  overflow: hidden;*/
-  /*width: 50%;*/
-  /*margin: 0 50px;*/
-/*}*/
-
 .banner-container img {
   width: 50%;
 }
@@ -101,7 +90,7 @@ a {
  /*GALLERY PAGE*/
 /*============*/
 
-/*gallery.css*/
+/*see gallery.css*/
 
   /*============*/
  /*CONTACT PAGE*/
@@ -133,15 +122,15 @@ a {
  /*FOOTER*/
 /*======*/
 
-.footer {
-  position:fixed;
-  bottom:0;
-  width:100%;
+/*.footer {*/
+/*  position:fixed;*/
+/*  bottom:0;*/
+/*  width:100%;*/
   /*float: right;*/
-  overflow: auto;
-  height:30px;
-  color:rgba(255,255,255,0.5);
-}
+/*  overflow: auto;*/
+/*  height:30px;*/
+/*  color:rgba(255,255,255,0.5);*/
+/*}*/
 
   /*==========*/
  /*RESPONSIVE*/
@@ -149,19 +138,19 @@ a {
 
 /*horizontal and vertical centering*/
 
-.wrap {
-  display: flex;
-  justify-content: center;
-  width: 33.33%;
-  height: 500px;
-  background: silver;
-}
+/*.wrap {*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*  width: 33.33%;*/
+/*  height: 500px;*/
+/*  background: silver;*/
+/*}*/
 
-.inner {
-  background: gold;
-  align-self: center;
-  padding: 2rem;
-}
+/*.inner {*/
+/*  background: gold;*/
+/*  align-self: center;*/
+/*  padding: 2rem;*/
+/*}*/
 
 /* Extra small devices (phones, 600px and down) */
 /*@media only screen and (max-width: 600px) {...} */
@@ -178,6 +167,8 @@ a {
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /*@media only screen and (min-width: 1200px) {...}*/
 
-::-webkit-scrollbar { 
-    display: none; 
-}
+/*remove scroll bar*/
+
+/*::-webkit-scrollbar { */
+/*    display: none; */
+/*}*/

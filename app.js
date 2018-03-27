@@ -31,11 +31,11 @@ app.get('/gallery/:type/index', function(req, res) {
 app.get('/gallery/:type/:title', function(req, res){
     projects.forEach(function(project){
         if (project.title === req.params.title) {
-            res.render('gallery/' + req.params.type + '/show', {project: project,
-                                                                homeActive: '',
-                                                                galleryActive: 'active',
-                                                                contactActive: '',
-                                                                background: 'gallery-show'})
+            res.render('gallery/show', {project: project,
+                                        homeActive: '',
+                                        galleryActive: 'active',
+                                        contactActive: '',
+                                        background: 'gallery-show'})
         }                                         
     })
 })

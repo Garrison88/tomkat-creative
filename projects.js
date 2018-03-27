@@ -12,7 +12,7 @@ var projects = [
         title: 'Powerstick',
         description: 'Wherever Pete goes, he is never without his trusty Powerstick. Don\'t get stuck without your portable devices. Carry power with you just like Pete!',
         thumb: 'powerstick.png',
-        videoEmbedUrls: ['www.youtube.com/embed/bsuD9j7QxKQ', 'www.youtube.com/embed/eTu6m1PpEI0', 'www.youtube.com/embed/oNGiLFF9dYY']
+        videoEmbedUrls: ['youtube.com/embed/bsuD9j7QxKQ', 'youtube.com/embed/eTu6m1PpEI0', 'youtube.com/embed/oNGiLFF9dYY']
     },
         {
         type: 'animation',
