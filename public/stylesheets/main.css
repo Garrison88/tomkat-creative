@@ -123,7 +123,7 @@ a {
   color: #232323;
   background: none;
     display: inline;
-    padding: 0 10px 0 10px;
+    padding: 0 5px;
 }
 
   /*======*/
@@ -134,9 +134,9 @@ a {
 /*  position:fixed;*/
 /*  bottom:0;*/
 /*  width:100%;*/
-  /*float: right;*/
+/*  float: right;*/
 /*  overflow: auto;*/
-/*  height:30px;*/
+/*  height:89px;*/
 /*  color:rgba(255,255,255,0.5);*/
 /*}*/
 

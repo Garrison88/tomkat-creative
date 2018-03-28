@@ -1,5 +1,57 @@
+// var projects = [
+//         {type:'animation'[
+//             {
+//                 title: 'Abstract Film',
+//                 images: ['sexy-film.gif'],
+//                 description: 'Abstract sexy gif',
+//                 thumb: 'sexy-film.png'
+//             },
+//             {
+//                 title: 'Abstract Film',
+//                 images: ['sexy-film.gif'],
+//                 description: 'Abstract sexy gif',
+//                 thumb: 'sexy-film.png'
+//             }
+//         ]},
+//         {type:'illustration'[
+//             {
+//                 title: 'Abstract Film',
+//                 images: ['sexy-film.gif'],
+//                 description: 'Abstract sexy gif',
+//                 thumb: 'sexy-film.png'
+//             },
+//             {
+//                 title: 'Abstract Film',
+//                 images: ['sexy-film.gif'],
+//                 description: 'Abstract sexy gif',
+//                 thumb: 'sexy-film.png'
+//             }
+//         ]},
+//         {type:'web'[
+//             {
+//                 title: 'Abstract Film',
+//                 images: ['sexy-film.gif'],
+//                 description: 'Abstract sexy gif',
+//                 thumb: 'sexy-film.png'
+//             },
+//             {
+//                 title: 'Abstract Film',
+//                 images: ['sexy-film.gif'],
+//                 description: 'Abstract sexy gif',
+//                 thumb: 'sexy-film.png'
+//             }
+//         ]}]
+
+
 var projects = [
         // ** ANIMATION **
+                {
+        type: 'animation',
+        title: 'Panda Robot',
+        images: ['panda-robot.gif'],
+        description: 'Panda robot being electrocuted',
+        thumb: 'panda-robot.gif'
+    },
         {
         type: 'animation',
         title: 'Abstract Film',
@@ -7,7 +59,7 @@ var projects = [
         description: 'Abstract sexy gif',
         thumb: 'sexy-film.png'
     },
-            {
+        {
         type: 'animation',
         title: 'Powerstick',
         description: 'Wherever Pete goes, he is never without his trusty Powerstick. Don\'t get stuck without your portable devices. Carry power with you just like Pete!',
@@ -94,6 +146,14 @@ var projects = [
         siteUrl: 'http://bigworldsmallbudget.com/',
         description: 'Big World Small Budget logo',
         thumb: 'bwsb.png'
+    },
+        {
+        type: 'web',
+        title: 'Junk Removal Android App',
+        images: ['roi-1.png', 'roi-2.png', 'roi-3.png', 'roi-4.png', 'roi-5.png', 'roi-6.png', 'roi-7.png'],
+        siteUrl: 'https://www.ridofittoronto.com/',
+        description: 'Logistics app created for a junk removal company in Toronto. Connects to Google Firebase database and features user authentication, real-time data-sync, and Material Design',
+        thumb: 'roi.png'
     },
         {
         type: 'web',
