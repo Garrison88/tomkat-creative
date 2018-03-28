@@ -1,9 +1,16 @@
 @import "gallery.css";
 
+/*most general and fonts*/
+
 html,
 body {
   height: 100%;
   min-height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
 }
 
 .full-body {
@@ -30,8 +37,10 @@ display: block;
  /*HEADER*/
 /*======*/
 
-.banner-container img {
-  width: 50%;
+@media only screen and (min-width: 600px) {
+  #header {
+    width: 50%;
+  }  
 }
 
   /*==========*/
@@ -40,12 +49,12 @@ display: block;
 
 /*dropdown menu*/
 
-.btn-secondary {
+.btn-secondary,
+.dropdown-item {
   border: none;
   background-color: transparent;
   color: #007876;
   padding: 8px 16px;
-  margin: 0 6px;
   text-decoration: none;
 }
 
@@ -68,7 +77,7 @@ display: block;
 }
 
 .nav-pills .nav-link {
-  margin: 0 6px;
+  margin: 0 1em;
 }
 
 a {
