@@ -8,25 +8,25 @@
           <span><a href="javascript:history.back()">Go Back</a></span>
       </div>
       <div>
-        <% if (project.siteUrl) { %>
-          <a href='<%= project.siteUrl %>'><h4><%= project.title %></h4></a>
+        <% if (foundProject.siteUrl) { %>
+          <a href='<%= foundProject.siteUrl %>'><h4><%= foundProject.title %></h4></a>
         <% } else { %>
-          <h4><%= project.title %></h4>
+          <h4><%= foundProject.title %></h4>
         <% } %>
       </div>
     </div>
     <div>
-      <p id="project-description"><%= project.description %></p>
+      <p id="project-description"><%= foundProject.description %></p>
     </div>
-    <% if (project.videoEmbedUrls) { %>
-      <% project.videoEmbedUrls.forEach(function(videoEmbedUrl){ %>
+    <% if (foundProject.videoEmbedUrls) { %>
+      <% foundProject.videoEmbedUrls.forEach(function(videoEmbedUrl){ %>
         <div class='embed-container'>
           <iframe src='https://<%= videoEmbedUrl %>' width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         </div>
         <hr>
       <% }) %>
-      <% } else { %>
-        <% project.images.forEach(function(image){ %>
+      <% } else if (foundProject.images) { %>
+        <% foundProject.images.forEach(function(image){ %>
           <img class="main-image" src="/img/<%= image %>">
           <hr>
         <% }) %>

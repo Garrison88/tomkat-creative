@@ -1,8 +1,7 @@
-var express      = require('express'),
-    app          = express(),
-    bodyParser   = require('body-parser'),
-    projects     = require('./projects')
-    // projects     = JSON.parse(projectsJSON)
+var express    = require('express'),
+    app        = express(),
+    bodyParser = require('body-parser'),
+    projects   = require('./projects')
     
 app.set("view engine", "ejs")
 app.use(express.static(__dirname + '/public'))
@@ -17,21 +16,24 @@ app.get('/', function(req, res) {
 })
 
 // gallery INDEX route 
-app.get('/gallery/:type/index', function(req, res) {
-    // console.log(projects)
-    res.render('./gallery/index', {type: req.params.type,
-                                   projects: projects,
+app.get('/gallery/:type/index', function(req, res){
+    var type = req.params.type;
+    res.render('./gallery/index', {type: type,
+                                   projects: projects[type],
                                    homeActive: '',
                                    galleryActive: 'active',
                                    contactActive: '',
                                    background: 'gallery'})
 })
 
-// gallery SHOW route
+// gallery SHOW routes
 app.get('/gallery/:type/:title', function(req, res){
-    projects.forEach(function(project){
-        if (project.title === req.params.title) {
-            res.render('gallery/show', {project: project,
+    // loop through projects that are at index of 'type'
+    projects[req.params.type].forEach(function(foundProject){
+        // find the project that matches requested 'title'
+        if (foundProject.title === req.params.title) {
+            // render the show page with the found project's credentials
+            res.render('gallery/show', {foundProject: foundProject,
                                         homeActive: '',
                                         galleryActive: 'active',
                                         contactActive: '',

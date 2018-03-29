@@ -3,19 +3,17 @@
     
     <div style="padding-top:20px">
       <% projects.forEach(function(project){ %>
-        <% if (project.type === type) {%>
-          <a href="/gallery/<%= project.type %>/<%= project.title %>">
-            <div class="square bg" style="background-image:url('/img/thumbnails/<%= project.thumb %>')">
-              <div class="content">
-                <div class="table">
-                  <div class="table-cell">
-                    <p><%= project.title %></p>
-                  </div>
+        <a href="/gallery/<%= type %>/<%= project.title %>">
+          <div class="square bg" style="background-image:url('/img/thumbnails/<%= project.thumb %>')">
+            <div class="content">
+              <div class="table">
+                <div class="table-cell">
+                  <p><%= project.title %></p>
                 </div>
               </div>
             </div>
-          </a>
-        <% } %>
+          </div>
+        </a>
       <% }) %>
     </div>
 
