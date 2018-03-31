@@ -1,10 +1,22 @@
 var projects = {
     animation:[       
     {
+        title: 'Jellyegg',
+        images: ['jellyegg.gif'],
+        description: 'Floating in space',
+        thumb: 'jellyegg.gif'
+    },
+    {
         title: 'Panda Robot',
         images: ['panda-robot.gif'],
         description: 'Panda robot being electrocuted',
         thumb: 'panda-robot.gif'
+    },
+        {
+        title: 'Dolphin',
+        images: ['anim_dolphin.gif'],
+        description: 'Baaaayyyybbyyy dolphin...!',
+        thumb: 'dolphin.gif'
     },
         {
         title: 'Abstract Film',
@@ -17,12 +29,6 @@ var projects = {
         description: 'Wherever Pete goes, he is never without his trusty Powerstick. Don\'t get stuck without your portable devices. Carry power with you just like Pete!',
         thumb: 'powerstick.png',
         videoEmbedUrls: ['youtube.com/embed/bsuD9j7QxKQ', 'youtube.com/embed/eTu6m1PpEI0', 'youtube.com/embed/oNGiLFF9dYY']
-    },
-        {
-        title: 'Dolphin',
-        images: ['anim_dolphin.gif'],
-        description: 'Baaaayyyybbyyy dolphin...!',
-        thumb: 'dolphin.gif'
     },
         {
         title: 'Demo Reel',
