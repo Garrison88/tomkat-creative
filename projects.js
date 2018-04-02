@@ -1,4 +1,4 @@
-var projects = {
+let projects = {
     animation:[       
     {
         title: 'Jellyegg',
@@ -108,6 +108,6 @@ var projects = {
         description: 'Commissioned by dawn ayer COMMUNICATIONS to design and develop a website promoting their services',
         thumb: 'dawn-ayer.png'
     }]
-}
+};
 
 module.exports = projects;
