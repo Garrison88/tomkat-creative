@@ -25,9 +25,9 @@
         </div>
         <hr>
       <% }) %>
-      <% } else if (foundProject.images) { %>
-        <% foundProject.images.forEach(function(image){ %>
-          <img class="main-image" src="/img/<%= image %>">
+      <% } else if (foundProject.imagePaths) { %>
+        <% foundProject.imagePaths.forEach(function(imagePath){ %>
+          <img class="main-image" src="/img/<%= imagePath %>">
           <hr>
         <% }) %>
       <% } %>
