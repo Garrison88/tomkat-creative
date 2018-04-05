@@ -108,18 +108,19 @@ a {
   background-color: #b2d2d1;
 }
 
-#contact-wrapper {
+/*#contact-wrapper {*/
   /*margin-top: 10%;*/
-}
+/*}*/
 
 #contact-wrapper img {
   margin: -2.7em 0 -1.75em 0;
   z-index: -1;
+  width: 15em;
   position: relative;
 }
 
 #social-bar {
-    font-size: 3em;
+    font-size: 2em;
     list-style-type: none;
     padding: 0;
 }
