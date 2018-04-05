@@ -1,21 +1,15 @@
 <% include ../partials/head %>
 <!--initial body and div included in head.ejs-->
     
-    <div style="padding-top:20px">
-      <% projects.forEach(function(project){ %>
-        <a href="/gallery/<%= type %>/<%= project.title %>">
-          <div class="square bg" style="background-image:url('/img/thumbnails/<%= project.thumbPath %>')">
-            <div class="content">
-              <div class="table">
-                <div class="table-cell">
-                  <p><%= project.title %></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </a>
-      <% }) %>
-    </div>
+  <div style="padding-top:20px">
+    <% projects.forEach(function(project){ %>
+      <a href="/gallery/<%= type %>/<%= project.title %>">
+        <div class="square bg" style="background-image:url('/img/thumbnails/<%= project.thumbPath %>')">
+          <p><%= project.title %></p>
+        </div>
+      </a>
+    <% }) %>
+  </div>
 
 <!--final div included in footer.ejs-->
 <% include ../partials/footer %>

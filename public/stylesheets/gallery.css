@@ -1,23 +1,23 @@
-  /*==================*/
- /*INDEX ROUTE STYLES*/
-/*==================*/
+  /*============*/
+ /*INDEX STYLES*/
+/*============*/
 
 #gallery-background {
   /*background-image: url('/img/thierry.gif');*/
   background-color: #fbd1c0;
 }
 
-/* default of 2 columns for small devices */
+ /*default of 2 columns for small devices */
 .square {
   float: left;
   position: relative;
   width: 48%;
-  padding-bottom : 48%; /* = width for a 1:1 aspect ratio */
+  padding-bottom : 48%;   /*= width for a 1:1 aspect ratio */
   margin: 0.5%;
   overflow: hidden;
 }
 
-/* 3 columns for medium devices */
+ /*3 columns for medium devices */
 @media only screen and (min-width: 426px) {
   .square {
     width: 32.3%;
@@ -25,7 +25,7 @@
   }
 }
 
-/* 4 columns for large devices */
+ /*4 columns for large devices */
 @media only screen and (min-width: 769px) {
   .square {
     width: 24%;
@@ -34,43 +34,23 @@
 }
 
 .bg {
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #fff;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.content {
-  position:absolute;
-  height:100%; 
-   /*= 100% - 2*10% padding */
-  width:100%; 
-   /*= 100% - 2*5% padding */
-  /*padding: 5%;*/
-}
-
-.table {
-  display:table;
-  height:100%;
-  width:100%;
-}
-
-.table-cell {
-  display: table-cell;
-  vertical-align: bottom;
-  height: 100%;
+.square p {
+  position: absolute;
   width: 100%;
-}
-
-.table-cell p {
   color:#000;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.8);
   margin: 0;
+  bottom: 0;
 }
 
-  /*=================*/
- /*SHOW ROUTE STYLES*/
-/*=================*/
+  /*===========*/
+ /*SHOW STYLES*/
+/*===========*/
 
 #gallery-show-background {
   /*background-image: url('/img/thierry.gif');*/
