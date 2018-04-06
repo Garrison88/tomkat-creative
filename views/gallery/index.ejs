@@ -4,9 +4,13 @@
   <div style="padding-top:20px">
     <% projects.forEach(function(project){ %>
       <a href="/gallery/<%= type %>/<%= project.title %>">
+        <!--<div class="grid">-->
+        <figure class="effect-lily">
         <div class="square bg" style="background-image:url('/img/thumbnails/<%= project.thumbPath %>')">
           <p><%= project.title %></p>
         </div>
+        </figure>
+        <!--</div>-->
       </a>
     <% }) %>
   </div>

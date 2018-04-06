@@ -2,36 +2,28 @@
 <!--initial body and div included in head.ejs-->
     
   <hr>
-  <div class="container">
-    <div>
-      <div id="b">
-          <span><a href="javascript:history.back()">Go Back</a></span>
-      </div>
-      <div>
-        <% if (foundProject.siteUrl) { %>
-          <a href='<%= foundProject.siteUrl %>'><h4><%= foundProject.title %></h4></a>
-        <% } else { %>
-          <h4><%= foundProject.title %></h4>
-        <% } %>
-      </div>
+    <div id="show-title-div">
+        <span position="absolute"><a href="javascript:history.back()"><span><i class="fas fa-arrow-left"></i></span> Go Back</a></span>
     </div>
-    <div>
-      <p id="project-description"><%= foundProject.description %></p>
-    </div>
+      <% if (foundProject.siteUrl) { %>
+        <a href='<%= foundProject.siteUrl %>'><h4><%= foundProject.title %></h4></a>
+      <% } else { %>
+        <h4><%= foundProject.title %></h4>
+      <% } %>
+    <p id="project-description"><%= foundProject.description %></p>
     <% if (foundProject.videoEmbedUrls) { %>
-      <% foundProject.videoEmbedUrls.forEach(function(videoEmbedUrl){ %>
-        <div class='embed-container'>
-          <iframe src='https://<%= videoEmbedUrl %>' width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
+    <% foundProject.videoEmbedUrls.forEach(function(videoEmbedUrl){ %>
+      <div class='embed-container'>
+        <iframe src='https://<%= videoEmbedUrl %>' width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+      <hr>
+    <% }) %>
+    <% } else if (foundProject.imagePaths) { %>
+      <% foundProject.imagePaths.forEach(function(imagePath){ %>
+        <img class="main-image" src="/img/<%= imagePath %>">
         <hr>
       <% }) %>
-      <% } else if (foundProject.imagePaths) { %>
-        <% foundProject.imagePaths.forEach(function(imagePath){ %>
-          <img class="main-image" src="/img/<%= imagePath %>">
-          <hr>
-        <% }) %>
-      <% } %>
-  </div>
+    <% } %>
     
 <!--final div included in footer.ejs-->
 <% include ../partials/footer %>

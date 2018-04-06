@@ -1,7 +1,7 @@
-let    express = require('express');
-let        app = express();
+let express    = require('express');
+let app        = express();
 let bodyParser = require('body-parser');
-let   projects = require('./projects');
+let projects   = require('./projects');
     
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));

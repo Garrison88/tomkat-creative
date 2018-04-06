@@ -34,8 +34,6 @@
 }
 
 .bg {
-  background-position: center center;
-  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -43,7 +41,7 @@
   position: absolute;
   width: 100%;
   color:#000;
-  background: rgba(255,255,255,0.8);
+  background: rgba(0,0,0,0.9);
   margin: 0;
   bottom: 0;
 }
@@ -54,7 +52,7 @@
 
 #gallery-show-background {
   /*background-image: url('/img/thierry.gif');*/
-  background-color: #fff;
+  background-color: #fdfdfd;
 }
 
 /*responsive img*/
@@ -87,18 +85,16 @@
 
 /*this centers the title*/
 
-/*#a {*/
-/*    text-align: center;*/
-/*    position: relative;*/
-/*}*/
-
-#b {
+ /*4 columns for large devices */
+@media only screen and (min-width: 768px) {
+  #show-title-div {
     position: absolute;
+  }
 }
 
-/*#d {*/
-/*    display: inline-block;*/
-/*}*/
+#show-title-div {
+  text-align: left !important;
+}
 
 /*this left-aligns the description*/
 
