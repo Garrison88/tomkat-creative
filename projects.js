@@ -28,31 +28,31 @@ let projects = {
         title: 'Powerstick',
         description: 'Wherever Pete goes, he is never without his trusty Powerstick. Don\'t get stuck without your portable devices. Carry power with you just like Pete!',
         thumbPath: 'powerstick.png',
-        videoEmbedUrls: ['youtube.com/embed/bsuD9j7QxKQ', 'youtube.com/embed/eTu6m1PpEI0', 'youtube.com/embed/oNGiLFF9dYY']
+        embedUrls: ['youtube.com/embed/bsuD9j7QxKQ', 'youtube.com/embed/eTu6m1PpEI0', 'youtube.com/embed/oNGiLFF9dYY']
     },
         {
         title: 'Demo Reel',
         description: 'Demo reel',
         thumbPath: 'demo-reel.png',
-        videoEmbedUrls: ['player.vimeo.com/video/259600005']
+        embedUrls: ['player.vimeo.com/video/259600005']
     },
         {
         title: 'Birthday Wishes',
         description: 'Birthday Wishes for JibJab Facebook App',
         thumbPath: 'birthday-wishes.png',
-        videoEmbedUrls: ['player.vimeo.com/video/259804841']
+        embedUrls: ['player.vimeo.com/video/259804841']
     },
         {
         title: 'Enhanced Imagination',
         description: 'Animation spot for Enhanced Imagination',
         thumbPath: 'enhanced-imagination.png',
-        videoEmbedUrls: ['player.vimeo.com/video/259804372']
+        embedUrls: ['player.vimeo.com/video/259804372']
     },
         {
         title: 'Ground Zero',
         description: 'Commercial spot for Ground Zero (Toronto)',
         thumbPath: 'ground-zero.png',
-        videoEmbedUrls: ['player.vimeo.com/video/259804261']
+        embedUrls: ['player.vimeo.com/video/259804261']
     }],
     illustration:[      
     {
@@ -104,7 +104,8 @@ let projects = {
         {
         title: 'DawnAyer.com',
         imagePaths: ['dawn-ayer-1.png', 'dawn-ayer-2.png', 'dawn-ayer-3.png'],
-        siteUrl: 'http://dawnayer.com/',
+        siteUrl: 'https://dawnayer.com/',
+        embedUrls: ['dawnayer.com/'],
         description: 'Commissioned by dawn ayer COMMUNICATIONS to design and develop a website promoting their services',
         thumbPath: 'dawn-ayer.png'
     }]

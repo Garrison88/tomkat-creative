@@ -55,6 +55,10 @@
   background-color: #fdfdfd;
 }
 
+.img-fluid {
+  outline: none !important;
+}
+
 /*responsive img*/
 
 .main-image {
@@ -93,6 +97,7 @@
 }
 
 #show-title-div {
+  margin-bottom: 1rem;
   text-align: left !important;
 }
 

@@ -11,19 +11,23 @@
         <h4><%= foundProject.title %></h4>
       <% } %>
     <p id="project-description"><%= foundProject.description %></p>
-    <% if (foundProject.videoEmbedUrls) { %>
-    <% foundProject.videoEmbedUrls.forEach(function(videoEmbedUrl){ %>
+    <% if (foundProject.embedUrls) { %>
+    <% foundProject.embedUrls.forEach(function(embedUrl){ %>
       <div class='embed-container'>
-        <iframe src='https://<%= videoEmbedUrl %>' width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe src="https://<%= embedUrl %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
       <hr>
     <% }) %>
     <% } else if (foundProject.imagePaths) { %>
       <% foundProject.imagePaths.forEach(function(imagePath){ %>
-        <img class="main-image" src="/img/<%= imagePath %>">
+        <a href="/img/<%= imagePath %>" data-toggle="lightbox" data-title="<%= foundProject.title %>">
+          <img class="main-image" src="/img/<%= imagePath %>">
+        </a>
         <hr>
       <% }) %>
     <% } %>
+    
+    
     
 <!--final div included in footer.ejs-->
 <% include ../partials/footer %>

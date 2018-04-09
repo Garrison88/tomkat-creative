@@ -28,11 +28,6 @@ p {
   transform: translateY(-50%);
 }
 
-a:hover img {
-border: none !important;
-display: block;
-}
-
   /*======*/
  /*HEADER*/
 /*======*/
