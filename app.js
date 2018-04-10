@@ -1,14 +1,14 @@
-let express    = require('express');
-let app        = express();
-let bodyParser = require('body-parser');
-let projects   = require('./projects');
+const express    = require('express');
+const app        = express();
+const bodyParser = require('body-parser');
+const projects   = require('./projects');
     
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 
 // INDEX route 
-app.get('/', function(req, res) {
+app.get('/', (req, res) => {
     res.render('home', {homeActive: 'active',
                         galleryActive: '',
                         contactActive: '',
@@ -16,7 +16,7 @@ app.get('/', function(req, res) {
 });
 
 // gallery INDEX route 
-app.get('/gallery/:type/index', function(req, res){
+app.get('/gallery/:type/index', (req, res) => {
     let type = req.params.type;
     res.render('./gallery/index', {type: type,
                                    projects: projects[type],
@@ -27,11 +27,11 @@ app.get('/gallery/:type/index', function(req, res){
 });
 
 // gallery SHOW routes
-app.get('/gallery/:type/:title', function(req, res){
+app.get('/gallery/:type/:title', (req, res) => {
     // loop through projects that are at index of 'type'
-    projects[req.params.type].forEach(function(foundProject){
+    projects[req.params.type].forEach((foundProject)  => {
         // find the project that matches requested 'title'
-        if (foundProject.title === req.params.title){
+        if (foundProject.title === req.params.title) {
             // render the show page with the found project's credentials
             res.render('gallery/show', {foundProject: foundProject,
                                         homeActive: '',
@@ -43,13 +43,13 @@ app.get('/gallery/:type/:title', function(req, res){
 });
 
 // Contact route
-app.get('/contact', function(req, res) {
+app.get('/contact', (req, res) => {
     res.render('contact', {homeActive: '',
                            galleryActive: '',
                            contactActive: 'active',
                            background: 'contact'});
 });
 
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(process.env.PORT, process.env.IP, () => {
    console.log("The Server Has Started!");
 });

@@ -1,5 +1,4 @@
 <% include ../partials/head %>
-<!--initial body and div included in head.ejs-->
     
   <hr>
     <div id="show-title-div">
@@ -12,14 +11,14 @@
       <% } %>
     <p id="project-description"><%= foundProject.description %></p>
     <% if (foundProject.embedUrls) { %>
-    <% foundProject.embedUrls.forEach(function(embedUrl){ %>
+    <% foundProject.embedUrls.forEach((embedUrl) => { %>
       <div class='embed-container'>
         <iframe src="https://<%= embedUrl %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
       <hr>
     <% }) %>
     <% } else if (foundProject.imagePaths) { %>
-      <% foundProject.imagePaths.forEach(function(imagePath){ %>
+      <% foundProject.imagePaths.forEach((imagePath) => { %>
         <a href="/img/<%= imagePath %>" data-toggle="lightbox" data-title="<%= foundProject.title %>">
           <img class="main-image" src="/img/<%= imagePath %>">
         </a>
@@ -27,7 +26,4 @@
       <% }) %>
     <% } %>
     
-    
-    
-<!--final div included in footer.ejs-->
 <% include ../partials/footer %>

@@ -22,7 +22,7 @@ let projects = {
         title: 'Abstract Film',
         imagePaths: ['sexy-film.gif'],
         description: 'Abstract sexy gif',
-        thumbPath: 'sexy-film.png'
+        thumbPath: 'sexy-film.gif'
     },
         {
         title: 'Powerstick',
