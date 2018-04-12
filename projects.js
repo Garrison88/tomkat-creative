@@ -1,4 +1,4 @@
-let projects = {
+const projects = {
     animation:[       
     {
         title: 'Jellyegg',
@@ -80,7 +80,14 @@ let projects = {
         thumbPath: 'animals.png'
     }],
     web:[        
-    {
+        {
+        title: 'RGB Guessing Game',
+        siteUrl: 'https://rgb-guessing-game-garrison.herokuapp.com/game-page.html',
+        embedUrls: ['rgb-guessing-game-garrison.herokuapp.com/game-page.html'],
+        description: 'Guess the colour based on RGB values from 3 or 6 options. A correct answer will yield the closet colour name. Play with either your mouse or keyboard!',
+        thumbPath: 'colour-game.png'
+    },
+        {
         title: 'Barking Teacup',
         imagePaths: ['barking-teacup-1.png', 'barking-teacup-2.png'],
         siteUrl: 'https://twitter.com/barkingteacup',
@@ -103,7 +110,6 @@ let projects = {
     },
         {
         title: 'DawnAyer.com',
-        imagePaths: ['dawn-ayer-1.png', 'dawn-ayer-2.png', 'dawn-ayer-3.png'],
         siteUrl: 'https://dawnayer.com/',
         embedUrls: ['dawnayer.com/'],
         description: 'Commissioned by dawn ayer COMMUNICATIONS to design and develop a website promoting their services',
