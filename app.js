@@ -1,5 +1,3 @@
-// @ts-check
-
 const express    = require('express');
 const app        = express();
 const bodyParser = require('body-parser');
@@ -52,6 +50,6 @@ app.get('/contact', (req, res) => {
                            background: 'contact'});
 });
 
-app.listen(3000, () => {
-   console.log("The Server Has Started!");
-});
+app.listen(process.env.PORT || 5000, process.env.IP, () => {
+    console.log("The Server Has Started!");
+ });
