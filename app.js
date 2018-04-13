@@ -9,9 +9,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 // INDEX route 
 app.get('/', (req, res) => {
-    res.render('home', {homeActive: 'active',
-                        galleryActive: '',
-                        contactActive: '',
+    res.render('home', {page: 'home',
                         background: 'home'});
 });
 
@@ -20,9 +18,7 @@ app.get('/gallery/:type/index', (req, res) => {
     let type = req.params.type;
     res.render('./gallery/index', {type: type,
                                    projects: projects[type],
-                                   homeActive: '',
-                                   galleryActive: 'active',
-                                   contactActive: '',
+                                   page: 'work',
                                    background: 'gallery'});
 });
 
@@ -30,26 +26,21 @@ app.get('/gallery/:type/index', (req, res) => {
 app.get('/gallery/:type/:title', (req, res) => {
     // loop through projects that are at index of 'type'
     projects[req.params.type].forEach((foundProject)  => {
-        // find the project that matches requested 'title'
-        if (foundProject.title === req.params.title) {
-            // render the show page with the found project's credentials
-            res.render('gallery/show', {foundProject: foundProject,
-                                        homeActive: '',
-                                        galleryActive: 'active',
-                                        contactActive: '',
-                                        background: 'gallery-show'});
-        }                                         
+        // find the project that matches requested 'title' and render the show page with the found project's credentials
+        foundProject.title === req.params.title 
+                                            ? res.render('gallery/show', {foundProject: foundProject,
+                                                                          page: 'work',
+                                                                          background: 'gallery-show'}) 
+                                            : '';                                   
     });
 });
 
 // Contact route
 app.get('/contact', (req, res) => {
-    res.render('contact', {homeActive: '',
-                           galleryActive: '',
-                           contactActive: 'active',
+    res.render('contact', {page: 'contact',
                            background: 'contact'});
 });
 
-app.listen(process.env.PORT || 5000, process.env.IP, () => {
+app.listen(process.env.PORT || 3000, process.env.IP, () => {
     console.log("The Server Has Started!");
  });

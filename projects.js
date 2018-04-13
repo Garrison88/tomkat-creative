@@ -88,6 +88,13 @@ const projects = {
         thumbPath: 'colour-game.png'
     },
         {
+        title: 'YelpCamp',
+        siteUrl: 'https://fast-cliffs-46179.herokuapp.com/',
+        embedUrls: ['fast-cliffs-46179.herokuapp.com/'],
+        description: 'RESTful Express app for submitting and reviewing campsites. Features user authentication through Passport, CRUD routing, Bootstrap styling, EJS, JQuery, and NodeJS.',
+        thumbPath: 'yelp-camp.png'
+    },
+        {
         title: 'Barking Teacup',
         imagePaths: ['barking-teacup-1.png', 'barking-teacup-2.png'],
         siteUrl: 'https://twitter.com/barkingteacup',
