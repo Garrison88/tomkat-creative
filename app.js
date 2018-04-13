@@ -26,12 +26,13 @@ app.get('/gallery/:type/index', (req, res) => {
 app.get('/gallery/:type/:title', (req, res) => {
     // loop through projects that are at index of 'type'
     projects[req.params.type].forEach((foundProject)  => {
-        // find the project that matches requested 'title' and render the show page with the found project's credentials
+        // find the project that matches requested 'title'
         foundProject.title === req.params.title 
+                                            // render the show page with the found project's credentials
                                             ? res.render('gallery/show', {foundProject: foundProject,
                                                                           page: 'work',
                                                                           background: 'gallery-show'}) 
-                                            : '';                                   
+                                            : res.show('error');                                   
     });
 });
 
