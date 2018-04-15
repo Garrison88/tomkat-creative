@@ -1,0 +1,27 @@
+#contact-background {
+    background-color: $tk-light-blue;
+  }
+  
+  #contact-wrapper img {
+    margin: -2.7em 0 -1.75em 0;
+    z-index: -1;
+    width: 15em;
+    position: relative;
+  }
+  
+  #social-bar {
+    font-size: 2em;
+    list-style-type: none;
+    padding: 0;
+    li,
+    a {
+      color: black;
+      background: none;
+      display: inline;
+      padding: 0 5px;
+    }
+    a:hover {
+      color: $tk-coral;
+      transition: 0.5s;
+    }
+  }

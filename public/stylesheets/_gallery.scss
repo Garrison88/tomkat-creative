@@ -1,0 +1,100 @@
+/* INDEX STYLES */
+
+#gallery-background {
+  background-color: $tk-peach;
+}
+
+/* default of 2 columns for small devices */
+.square {
+  float: left;
+  position: relative;
+  width: 48%;
+  padding-bottom: 48%;
+  /* width for a 1:1 aspect ratio */
+  margin: 0.5%;
+  overflow: hidden;
+}
+
+/* 3 columns for medium devices */
+@media only screen and (min-width: 426px) {
+  .square {
+    width: 32.3%;
+    padding-bottom: 32.3%;
+  }
+}
+
+/* 4 columns for large devices */
+@media only screen and (min-width: 769px) {
+  .square {
+    width: 24%;
+    padding-bottom: 24%;
+  }
+}
+
+.bg {
+  background-size: cover;
+}
+
+.square p {
+  position: absolute;
+  width: 100%;
+  // color: black;
+  background: black;
+  margin: 0;
+  bottom: 0;
+}
+
+/* SHOW STYLES */
+
+// #gallery-show-background {
+//   background-color: white;
+// }
+
+.img-fluid {
+  outline: none !important;
+}
+
+/* responsive img */
+
+.main-image {
+  height: auto;
+  max-width: 80%;
+  outline: none !important;
+}
+
+/* responsive video embed */
+  
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* this centers the title */
+
+/* 4 columns for large devices */
+@media only screen and (min-width: 768px) {
+  #show-title-div {
+    position: absolute;
+  }
+}
+#show-title-div {
+  margin-bottom: 1rem;
+  text-align: left !important;
+}
+
+/* this left-aligns the description */
+#project-description {
+  text-align: left;
+}

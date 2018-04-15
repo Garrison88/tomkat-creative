@@ -1,0 +1,40 @@
+/* dropdown menu */
+
+.btn-secondary,
+.dropdown-item {
+  border: none;
+  background-color: transparent;
+  color: $tk-teal;
+  padding: 8px 16px;
+  text-decoration: none;
+  text-align: justify;
+  -moz-text-align-last: center;
+  text-align-last: center;
+}
+
+.dropdown-menu {
+  background: white;
+  border: none;
+}
+
+.btn-secondary:not(:disabled):not(.disabled).active,
+.btn-secondary:not(:disabled):not(.disabled):active,
+.show > .btn-secondary.dropdown-toggle {
+  color: white;
+  background-color: $tk-coral;
+}
+
+/* main nav a tags */
+
+.nav a:hover,
+.nav a:focus,
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  transition: all 250ms ease;
+  color: white;
+  background-color: $tk-coral;
+  text-decoration: none;
+}
+
+.nav-pills .nav-link {
+  margin: 0 1em;
+}

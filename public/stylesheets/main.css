@@ -1,46 +1,4 @@
-@import "gallery.css";
-
-/*most general and fonts*/
-
-html {
-
-height: 100%;
-/*padding-bottom: 5%;   */
-}
-
-body {
-  background-size: cover;
- 
-  /*padding-bottom: 30px;*/
-  font-family: 'Montserrat', sans-serif;
-}
-
-p {
-  font-family: 'Open Sans', sans-serif;
-}
-
-.vert-center {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-  /*======*/
- /*HEADER*/
-/*======*/
-
-@media only screen and (min-width: 600px) {
-  #header {
-    width: 50%;
-  }  
-}
-
-  /*==========*/
- /*NAVIGATION*/
-/*==========*/
-
-/*dropdown menu*/
-
+/* dropdown menu */
 .btn-secondary,
 .dropdown-item {
   border: none;
@@ -54,22 +12,21 @@ p {
 }
 
 .dropdown-menu {
-  background: #fff;
+  background: white;
   border: none;
 }
 
 .btn-secondary:not(:disabled):not(.disabled).active,
 .btn-secondary:not(:disabled):not(.disabled):active,
-.show>.btn-secondary.dropdown-toggle {
-  color: #fff;
+.show > .btn-secondary.dropdown-toggle {
+  color: white;
   background-color: #f48484;
 }
 
-/*main nav links*/
-
+/* main nav a tags */
 .nav a:hover,
 .nav a:focus,
-.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   transition: all 250ms ease;
   color: white;
   background-color: #f48484;
@@ -80,28 +37,98 @@ p {
   margin: 0 1em;
 }
 
-a {
-  text-decoration: none;
-  color: #007876;
+/* INDEX STYLES */
+#gallery-background {
+  background-color: #fbd1c0;
 }
 
-  /*=========*/
- /*HOME PAGE*/
-/*=========*/
-
-#home-background {
-  background-image: url('/img/thierry.gif');
+/* default of 2 columns for small devices */
+.square {
+  float: left;
+  position: relative;
+  width: 48%;
+  padding-bottom: 48%;
+  /* width for a 1:1 aspect ratio */
+  margin: 0.5%;
+  overflow: hidden;
 }
 
-  /*============*/
- /*GALLERY PAGE*/
-/*============*/
+/* 3 columns for medium devices */
+@media only screen and (min-width: 426px) {
+  .square {
+    width: 32.3%;
+    padding-bottom: 32.3%;
+  }
+}
 
-/*see gallery.css*/
+/* 4 columns for large devices */
+@media only screen and (min-width: 769px) {
+  .square {
+    width: 24%;
+    padding-bottom: 24%;
+  }
+}
 
-  /*============*/
- /*CONTACT PAGE*/
-/*============*/
+.bg {
+  background-size: cover;
+}
+
+.square p {
+  position: absolute;
+  width: 100%;
+  background: black;
+  margin: 0;
+  bottom: 0;
+}
+
+/* SHOW STYLES */
+.img-fluid {
+  outline: none !important;
+}
+
+/* responsive img */
+.main-image {
+  height: auto;
+  max-width: 80%;
+  outline: none !important;
+}
+
+/* responsive video embed */
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* this centers the title */
+/* 4 columns for large devices */
+@media only screen and (min-width: 768px) {
+  #show-title-div {
+    position: absolute;
+  }
+}
+
+#show-title-div {
+  margin-bottom: 1rem;
+  text-align: left !important;
+}
+
+/* this left-aligns the description */
+#project-description {
+  text-align: left;
+}
 
 #contact-background {
   background-color: #b2d2d1;
@@ -122,7 +149,7 @@ a {
 
 #social-bar li,
 #social-bar a {
-  color: #232323;
+  color: black;
   background: none;
   display: inline;
   padding: 0 5px;
@@ -133,35 +160,65 @@ a {
   transition: 0.5s;
 }
 
-  /*======*/
- /*FOOTER*/
-/*======*/
+/* most general and fonts */
+html {
+  height: 100%;
+}
 
+body {
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #007876;
+}
+
+.vert-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* HEADER */
+@media only screen and (min-width: 600px) {
+  #header {
+    width: 50%;
+  }
+}
+
+/* HOME PAGE */
+#home-background {
+  background-image: url("/img/thierry.gif");
+}
+
+/* GALLERY PAGE */
+/* see gallery.scss */
+/* FOOTER */
 footer {
   /* position: fixed; */
   right: 0;
   bottom: 0;
   left: 0;
   height: 5%;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   text-align: center;
 }
 
-  /*==========*/
- /*RESPONSIVE*/
-/*==========*/
-
+/* RESPONSIVE */
 /* Extra small devices (phones, 600px and down) */
 /*@media only screen and (max-width: 600px) {...} */
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
 /*@media only screen and (min-width: 600px) {...} */
-
 /* Medium devices (landscape tablets, 768px and up) */
 /*@media only screen and (min-width: 768px) {...} */
-
 /* Large devices (laptops/desktops, 992px and up) */
 /*@media only screen and (min-width: 992px) {...} */
-
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 /*@media only screen and (min-width: 1200px) {...}*/
+/*# sourceMappingURL=main.css.map */

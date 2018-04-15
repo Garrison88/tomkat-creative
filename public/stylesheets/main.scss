@@ -1,0 +1,72 @@
+@import 'colours';
+@import 'navigation';
+@import 'gallery';
+@import 'contact';
+
+/* most general and fonts */
+html {
+  height: 100%;
+}
+
+body {
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: $tk-teal;
+}
+
+.vert-center {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* HEADER */
+
+@media only screen and (min-width: 600px) {
+  #header {
+    width: 50%;
+  }
+}
+
+/* HOME PAGE */
+
+#home-background {
+  background-image: url("/img/thierry.gif");
+}
+
+/* GALLERY PAGE */
+
+/* see gallery.scss */
+
+/* FOOTER */
+
+footer {
+  /* position: fixed; */
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 5%;
+  background: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+/* RESPONSIVE */
+
+/* Extra small devices (phones, 600px and down) */
+/*@media only screen and (max-width: 600px) {...} */
+/* Small devices (portrait tablets and large phones, 600px and up) */
+/*@media only screen and (min-width: 600px) {...} */
+/* Medium devices (landscape tablets, 768px and up) */
+/*@media only screen and (min-width: 768px) {...} */
+/* Large devices (laptops/desktops, 992px and up) */
+/*@media only screen and (min-width: 992px) {...} */
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+/*@media only screen and (min-width: 1200px) {...}*/

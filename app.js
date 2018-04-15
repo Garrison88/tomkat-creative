@@ -36,7 +36,7 @@ app.get('/gallery/:type/:title', (req, res) => {
     });
 });
 
-// Contact route
+//contact route
 app.get('/contact', (req, res) => {
     res.render('contact', {page: 'contact',
                            background: 'contact'});

@@ -4,26 +4,26 @@
     <div id="show-title-div">
         <span position="absolute"><a href="javascript:history.back()"><span><i class="fas fa-arrow-left"></i></span> Go Back</a></span>
     </div>
-      <% if (foundProject.siteUrl) { %>
+      <% if (foundProject.siteUrl){ %>
         <a href='<%= foundProject.siteUrl %>'><h4><%= foundProject.title %></h4></a>
       <% } else { %>
         <h4><%= foundProject.title %></h4>
       <% } %>
     <p id="project-description"><%= foundProject.description %></p>
-    <% if (foundProject.embedUrls) { %>
-    <% foundProject.embedUrls.forEach((embedUrl) => { %>
+    <% if (foundProject.embedUrls){ %>
+    <% for (let embedUrl of foundProject.embedUrls){ %>
       <div class='embed-container'>
         <iframe src="https://<%= embedUrl %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
       <hr>
-    <% }) %>
-    <% } else if (foundProject.imagePaths) { %>
-      <% foundProject.imagePaths.forEach((imagePath) => { %>
+    <% } %>
+    <% } else if (foundProject.imagePaths){ %>
+      <% for (let imagePath of foundProject.imagePaths){ %>
         <a href="/img/<%= imagePath %>" data-toggle="lightbox" data-title="<%= foundProject.title %>">
           <img class="main-image" src="/img/<%= imagePath %>">
         </a>
         <hr>
-      <% }) %>
+      <% } %>
     <% } %>
     
 <% include ../partials/footer %>
