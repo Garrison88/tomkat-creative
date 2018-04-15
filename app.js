@@ -3,7 +3,7 @@ const app        = express();
 const bodyParser = require('body-parser');
 const projects   = require('./projects');
     
-app.set("view engine", "ejs");
+app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
 // gallery INDEX route 
 app.get('/gallery/:type/index', (req, res) => {
     let type = req.params.type;
-    res.render('./gallery/index', {type: type,
+    res.render('./gallery/index', {type,
                                    projects: projects[type],
                                    page: 'work',
                                    background: 'gallery'});
@@ -29,10 +29,10 @@ app.get('/gallery/:type/:title', (req, res) => {
         // find the project that matches requested 'title'
         if (foundProject.title === req.params.title) {
             // render the show page with the found project's credentials
-            res.render('gallery/show', {foundProject: foundProject,
+            res.render('gallery/show', {foundProject,
                                         page: 'work',
-                                        background: 'gallery-show'})   
-        }                                             
+                                        background: 'gallery-show'});
+        };
     });
 });
 
@@ -43,5 +43,5 @@ app.get('/contact', (req, res) => {
 });
 
 app.listen(process.env.PORT || 3000, process.env.IP, () => {
-    console.log("The Server Has Started!");
+    console.log('The Server Has Started!');
  });
