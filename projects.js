@@ -118,7 +118,7 @@ const projects = {
         },
         {
             title: 'Junk Removal Android App',
-            imagePaths: ['roi-1.png', 'roi-2.png', 'roi-3.png', 'roi-4.png', 'roi-5.png', 'roi-6.png', 'roi-7.png'],
+            imagePaths: ['roi-user_auth.gif', 'roi-create_journal.gif', 'roi-add_view_job.gif', 'roi-add_view_dump.gif', 'roi-custom_calc.gif', 'roi-dump_info.gif', 'roi-archive_journal.gif'],
             siteUrl: 'https://www.ridofittoronto.com/',
             description: 'Logistics app created for a junk removal company in Toronto. Connects to Google Firebase database and features user authentication, real-time data-sync, and Material Design',
             thumbPath: 'roi.png'

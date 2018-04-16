@@ -17,7 +17,6 @@
 }
 
 .btn-secondary:not(:disabled):not(.disabled).active,
-.btn-secondary:not(:disabled):not(.disabled):active,
 .show > .btn-secondary.dropdown-toggle {
   color: white;
   background-color: #f48484;
@@ -127,6 +126,7 @@
 
 /* this left-aligns the description */
 #project-description {
+  margin-bottom: 1rem;
   text-align: left;
 }
 
@@ -135,7 +135,7 @@
 }
 
 #contact-wrapper img {
-  margin: -2.7em 0 -1.75em 0;
+  margin: -2.7rem 0 -1.75rem 0;
   z-index: -1;
   width: 15em;
   position: relative;
@@ -162,16 +162,21 @@
 
 /* most general and fonts */
 html {
-  height: 100%;
+  position: relative;
+  min-height: 100%;
+  font-size: 100%;
 }
 
 body {
   background-size: cover;
+  min-height: 100%;
   font-family: "Montserrat", sans-serif;
 }
 
+/* FOOTER */
 p {
   font-family: "Open Sans", sans-serif;
+  margin-bottom: 0;
 }
 
 a {
@@ -195,19 +200,6 @@ a {
 /* HOME PAGE */
 #home-background {
   background-image: url("/img/thierry.gif");
-}
-
-/* GALLERY PAGE */
-/* see gallery.scss */
-/* FOOTER */
-footer {
-  /* position: fixed; */
-  right: 0;
-  bottom: 0;
-  left: 0;
-  height: 5%;
-  background: rgba(255, 255, 255, 0.9);
-  text-align: center;
 }
 
 /* RESPONSIVE */
