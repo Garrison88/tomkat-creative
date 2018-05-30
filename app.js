@@ -19,7 +19,7 @@ app.get('/gallery/:type/index', (req, res) => {
     res.render('./gallery/index', {type,
                                    projects: projects[type],
                                    page: 'work',
-                                   background: 'gallery'});
+                                   background: 'gallery',});
 });
 
 // gallery SHOW routes

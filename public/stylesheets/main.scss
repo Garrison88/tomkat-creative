@@ -20,14 +20,26 @@ body {
 
 /* FOOTER */
 
-// footer {
-//   position: absolute;
-//   bottom: 0;
-//   width: 100%;
-//   height: 1rem;
-//   line-height: 1rem;
-//   background-color: transparent;
-// }
+footer {
+  width: 100%;
+  height: 1rem;
+  line-height: 1rem;
+  background-color: transparent;
+  clear: both;
+  padding: 20px 0;
+}
+
+.footer-wrapper {
+  left: 0;
+  right: 0;
+  padding: -20px 0;
+  position: fixed;
+  bottom: 30px;
+}
+
+footer p {
+  padding: 20px 0;
+}
 
 p {
   font-family: "Open Sans", sans-serif;

@@ -1,6 +1,6 @@
 <% include ../partials/head %>
     
-  <hr>
+  <div style="height: 10px"></div>
     <div id="show-title-div">
         <span position="absolute"><a href="javascript:history.back()"><span><i class="fas fa-arrow-left"></i></span> Go Back</a></span>
     </div>
@@ -12,17 +12,17 @@
     <p id="project-description"><%= foundProject.description %></p>
     <% if (foundProject.embedUrls){ %>
     <% for (let embedUrl of foundProject.embedUrls){ %>
+    <hr>
       <div class='embed-container'>
         <iframe src="https://<%= embedUrl %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
       </div>
-      <hr>
+      
     <% } %>
     <% } else if (foundProject.imagePaths){ %>
       <% for (let imagePath of foundProject.imagePaths){ %>
         <a href="/img/<%= imagePath %>" data-toggle="lightbox" data-title="<%= foundProject.title %>">
           <img class="main-image" src="/img/<%= imagePath %>">
         </a>
-        <hr>
       <% } %>
     <% } %>
     
