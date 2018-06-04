@@ -1,6 +1,6 @@
 <% include ../partials/head %>
     
-  <div style="padding-top:20px">
+  <div class="content">
     <% for (let project of projects) { %>
       <a href="/gallery/<%= type %>/<%= project.title %>">
         <figure class="effect-lily">
@@ -19,4 +19,6 @@
     </div> -->
   </div>
   
-<% include ../partials/footer %>
+<div class="footer">
+  <% include ../partials/footer %>
+</div>

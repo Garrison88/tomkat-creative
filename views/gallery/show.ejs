@@ -1,29 +1,33 @@
 <% include ../partials/head %>
-    
-  <div style="height: 10px"></div>
-    <div id="show-title-div">
-        <span position="absolute"><a href="javascript:history.back()"><span><i class="fas fa-arrow-left"></i></span> Go Back</a></span>
-    </div>
-      <% if (foundProject.siteUrl){ %>
-        <a href='<%= foundProject.siteUrl %>'><h4><%= foundProject.title %></h4></a>
-      <% } else { %>
-        <h4><%= foundProject.title %></h4>
-      <% } %>
-    <p id="project-description"><%= foundProject.description %></p>
-    <% if (foundProject.embedUrls){ %>
-    <% for (let embedUrl of foundProject.embedUrls){ %>
-    <hr>
-      <div class='embed-container'>
-        <iframe src="https://<%= embedUrl %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+  <div class="content">
+    <div class="show-grid">
+      <div class="show-info">
+        <span style="position:relative"><a href="javascript:history.back()"><span><i class="fas fa-arrow-left"></i></span> Go Back</a></span>
+        <% if (foundProject.siteUrl) { %>
+          <a href='<%= foundProject.siteUrl %>'><h4><%= foundProject.title %></h4></a>
+        <% } else { %>
+          <h4><%= foundProject.title %></h4>
+          <% } %>
+          <p id="project-description"><%= foundProject.description %></p>
       </div>
-      
-    <% } %>
-    <% } else if (foundProject.imagePaths){ %>
-      <% for (let imagePath of foundProject.imagePaths){ %>
-        <a href="/img/<%= imagePath %>" data-toggle="lightbox" data-title="<%= foundProject.title %>">
-          <img class="main-image" src="/img/<%= imagePath %>">
-        </a>
-      <% } %>
-    <% } %>
-    
-<% include ../partials/footer %>
+      <div class="show-project">
+        <% if (foundProject.embedUrls) { %>
+          <% for (let embedUrl of foundProject.embedUrls) { %>
+            <hr>
+            <div class='embed-container'>
+              <iframe src="https://<%= embedUrl %>" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+            </div>
+          <% } %>
+        <% } else if (foundProject.imagePaths) { %>
+          <% for (let imagePath of foundProject.imagePaths) { %>
+            <a href="/img/<%= imagePath %>" data-toggle="lightbox" data-title="<%= foundProject.title %>">
+              <img class="main-image" src="/img/<%= imagePath %>">
+            </a>
+          <% } %>
+        <% } %>
+      </div>
+    </div>
+  </div>
+<div class="footer">
+  <% include ../partials/footer %>
+</div>

@@ -84,7 +84,7 @@ const projects = {
             title: 'FOG Logo',
             imagePaths: ['fog.jpg'],
             description: 'Logo created for Hamilton-based motorcycle enthusiast group',
-            thumbPath: 'fog.jpg'
+            thumbPath: 'fog.png'
         }
     ],
     web:[        
