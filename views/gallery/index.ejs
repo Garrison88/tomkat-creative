@@ -1,7 +1,7 @@
 <% include ../partials/head %>
     
   <div class="content">
-    <% for (let project of projects) { %>
+    <!-- <% for (let project of projects) { %>
       <a href="/gallery/<%= type %>/<%= project.title %>">
         <figure class="effect-lily">
         <div class="square bg" style="background-image:url('/img/thumbnails/<%= project.thumbPath %>')">
@@ -9,16 +9,20 @@
         </div>
         </figure>
       </a>
-    <% } %>
-    <!-- <div class="grid-container">
+      <figure class="effect-lily">
+      </figure>
+    <% } %> -->
+    <div class="gallery-grid-container">
       <% for (let project of projects) { %>
-        <div class="grid-item" style="background:url('/img/thumbnails/<%= project.thumbPath %>') center center no-repeat; background-size: cover"> 
-          <p><%= project.title %></p>
-        </div>
+        <a href="/gallery/<%= type %>/<%= project.title %>">
+            <div class="gallery-grid-item" style="background:url('/img/thumbnails/<%= project.thumbPath %>') no-repeat; background-size: cover"> 
+              <p><%= project.title %></p>
+            </div>
+        </a>
       <% } %>
-    </div> -->
+    </div>
   </div>
   
-<div class="footer">
+<div class="footer" style="position:relative">
   <% include ../partials/footer %>
 </div>

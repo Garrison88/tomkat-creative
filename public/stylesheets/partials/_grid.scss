@@ -25,11 +25,26 @@
 
 .navigation {
     grid-area: nav;
+    padding: 15px 0;
 }
 
 .content {
     grid-area: content;
 }
+
+// INDEX PAGE
+
+.gallery-grid-container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+  }
+  
+  .gallery-grid-item {
+      // 1:1 aspect ratio
+    height: 0;
+    padding-bottom: 100%;
+  }
 
 // SHOW PAGE
 
@@ -77,6 +92,8 @@
     padding: 20px 0;
     bottom: 0;
     text-align: center;
+    width: 100%;
+    position: absolute;
 }
 
 @media only screen and (max-width: 600px) {
@@ -92,6 +109,9 @@
         grid-template-columns: 1fr;
         grid-template-areas: "banner"
     }
+    .gallery-grid-container {
+        grid-template-columns: 1fr 1fr;
+      }
     .show-grid {
         grid-template-columns: 1fr;
         grid-template-rows: auto auto;
