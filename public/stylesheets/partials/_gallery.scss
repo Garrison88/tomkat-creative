@@ -5,7 +5,55 @@
   overflow-x: hidden;
 }
 
+// .gallery-grid-item {
+//   border-radius: $md-card-corner-radius;
+//   box-shadow:  $md-card-shadow;
+// }
+// .gallery-grid-item:hover {
+//   transition: box-shadow .7s ease;
+//   transition: transform .7s ease;
+//   box-shadow:  rgba(0, 0, 0, 0.5) 0 3px 6px;
+//   transform: scale(1.005);
+// }
+
+.gallery-grid-item {
+  position: relative;
+  border-radius: 5px;
+  box-shadow: $md-card-shadow;
+  box-shadow: $md-card-shadow;
+  border-radius: 5px;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.gallery-grid-item::after {
+  content: "";
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: $md-card-shadow;
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.gallery-grid-item:hover {
+  -webkit-transform: scale(1.025, 1.025);
+  transform: scale(1.025, 1.025);
+}
+
+.gallery-grid-item:hover::after {
+    opacity: 1;
+}
+
+
+
 .gallery-grid-item p {
+  border-radius: $md-card-corner-radius $md-card-corner-radius 0px 0px;
   text-align: center;
   background: black;
   color: white;
@@ -14,7 +62,7 @@
 }
 
 .gallery-grid-item:hover p {
-  text-decoration: none;
+  border-radius: $md-card-corner-radius $md-card-corner-radius 0px 0px;
   -webkit-animation: fadein .7s; /* Safari, Chrome and Opera > 12.1 */
      -moz-animation: fadein .7s; /* Firefox < 16 */
       -ms-animation: fadein .7s; /* Internet Explorer */
@@ -22,6 +70,8 @@
           animation: fadein .7s;
   visibility: visible;
 }
+
+
 
 @keyframes fadein {
   from { opacity: 0; }

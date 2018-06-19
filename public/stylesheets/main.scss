@@ -1,13 +1,10 @@
-@import './partials/colours';
+@import './partials/variables';
 @import './partials/grid';
 @import './partials/navigation';
 @import './partials/gallery';
 @import './partials/contact';
-
-/* most general and fonts */
-
 html {
-  height: 100%;
+  height: 100vh;
 }
 
 body {

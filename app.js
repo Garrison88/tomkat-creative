@@ -1,3 +1,4 @@
+// const card       = require('@material/card');
 const express    = require('express');
 const app        = express();
 const bodyParser = require('body-parser');
@@ -19,7 +20,7 @@ app.get('/gallery/:type/index', (req, res) => {
     res.render('./gallery/index', {type,
                                    projects: projects[type],
                                    page: 'work',
-                                   background: 'gallery',});
+                                   background: 'gallery'});
 });
 
 // gallery SHOW routes

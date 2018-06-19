@@ -19,6 +19,7 @@
 
 .btn-secondary:not(:disabled):not(.disabled).active,
 .show > .btn-secondary.dropdown-toggle {
+  box-shadow: $md-card-shadow;
   color: white;
   background-color: $tk-coral;
 }
@@ -28,6 +29,7 @@
 .nav a:hover,
 .nav a:focus,
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  box-shadow: $md-card-shadow;
   transition: all 250ms ease;
   color: white;
   background-color: $tk-coral;

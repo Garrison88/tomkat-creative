@@ -1,17 +1,6 @@
 <% include ../partials/head %>
     
   <div class="content">
-    <!-- <% for (let project of projects) { %>
-      <a href="/gallery/<%= type %>/<%= project.title %>">
-        <figure class="effect-lily">
-        <div class="square bg" style="background-image:url('/img/thumbnails/<%= project.thumbPath %>')">
-          <p><%= project.title %></p>
-        </div>
-        </figure>
-      </a>
-      <figure class="effect-lily">
-      </figure>
-    <% } %> -->
     <div class="gallery-grid-container">
       <% for (let project of projects) { %>
         <a href="/gallery/<%= type %>/<%= project.title %>">
