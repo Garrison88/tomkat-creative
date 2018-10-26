@@ -46,10 +46,8 @@
 }
 
 .gallery-grid-item:hover::after {
-    opacity: 1;
+  opacity: 1;
 }
-
-
 
 .gallery-grid-item p {
   border-radius: $md-card-corner-radius $md-card-corner-radius 0px 0px;
@@ -62,17 +60,21 @@
 
 .gallery-grid-item:hover p {
   border-radius: $md-card-corner-radius $md-card-corner-radius 0px 0px;
-  -webkit-animation: fadein .7s; /* Safari, Chrome and Opera > 12.1 */
-     -moz-animation: fadein .7s; /* Firefox < 16 */
-      -ms-animation: fadein .7s; /* Internet Explorer */
-       -o-animation: fadein .7s; /* Opera < 12.1 */
-          animation: fadein .7s;
+  -webkit-animation: fadein 0.7s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 0.7s; /* Firefox < 16 */
+  -ms-animation: fadein 0.7s; /* Internet Explorer */
+  -o-animation: fadein 0.7s; /* Opera < 12.1 */
+  animation: fadein 0.7s;
   visibility: visible;
 }
 
 @keyframes fadein {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* SHOW STYLES */
@@ -107,7 +109,7 @@
 }
 
 /* responsive video embed */
-  
+
 .embed-container {
   position: relative;
   padding-bottom: 56.25%;

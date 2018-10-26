@@ -1,122 +1,126 @@
 .grid-container {
-    display: grid;
-    grid-gap: 10px;
-    align-content: center;
-    align-items: center;
-    grid-template-columns: 1fr 6fr 1fr;
-    grid-template-rows: auto auto 1fr auto;
-    grid-template-areas: ". header  ."
-                         ". nav     ."
-                         ". content ."
-                         ". footer  ."
+  display: grid;
+  grid-gap: 10px;
+  align-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: auto auto 1fr auto;
+  grid-template-areas:
+    ". header  ."
+    ". nav     ."
+    ". content ."
+    ". footer  .";
 }
 
 .header {
-    grid-area: header;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: ". banner ."
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: ". banner .";
 }
 
-
 .banner {
-    grid-area: banner;
+  grid-area: banner;
 }
 
 .navigation {
-    grid-area: nav;
-    padding: 15px 0;
+  grid-area: nav;
+  padding: 15px 0;
 }
 
 .content {
-    grid-area: content;
+  grid-area: content;
 }
 
 // INDEX PAGE
 
 .gallery-grid-container {
-    display: grid;
-    grid-gap: 10px;
-    grid-auto-flow: dense;
-    grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
-  }
-  
-  .gallery-grid-item {
-      // 1:1 aspect ratio
-    height: 0;
-    padding-bottom: 100%;
-  }
+  display: grid;
+  grid-gap: 10px;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, minmax(225px, 1fr));
+}
+
+.gallery-grid-item {
+  // 1:1 aspect ratio
+  height: 0;
+  padding-bottom: 100%;
+}
 
 // SHOW PAGE
 
 .show-grid {
-    display: grid;
-    text-align: center;
-    grid-template-columns: 1fr 6fr 1fr;
-    grid-template-rows: auto auto;
-    grid-template-areas: ". info ."
-                         ". project ."
-  }
-  
+  display: grid;
+  text-align: center;
+  grid-template-columns: 1fr 6fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    ". info ."
+    ". project .";
+}
+
 .show-info {
-    grid-area: info;
+  grid-area: info;
 }
 
 .show-project {
-    grid-area: project;
+  grid-area: project;
 }
 
 // CONTACT PAGE
 
 .contact-grid {
-    display: grid;
-    text-align: center;
-    justify-items: center;
-    align-items: center;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "info"
-                         "gif"                         
+  display: grid;
+  text-align: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "info"
+    "gif";
 }
 
 .contact-info {
-    grid-area: info;
+  grid-area: info;
 }
 
 .contact-gif {
-    grid-area: gif;
+  grid-area: gif;
 }
-                        
+
 .footer {
-    grid-area: footer;
-    clear: both;
-    padding: 20px 0;
-    bottom: 0;
-    text-align: center;
-    width: 100%;
-    position: absolute;
+  grid-area: footer;
+  clear: both;
+  padding: 20px 0;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  position: absolute;
 }
 
 @media only screen and (max-width: 600px) {
-    .grid-container {
-        grid-template-columns: 1fr 10fr 1fr;
-        grid-template-rows: auto auto 1fr auto;
-        grid-template-areas: ".       header  ."
-                             "nav     nav     nav"
-                             "content content content"
-                             ".       footer  ."
-    }
-    .header {
-        grid-template-columns: 1fr;
-        grid-template-areas: "banner"
-    }
-    .gallery-grid-container {
-        grid-template-columns: 1fr 1fr;
-      }
-    .show-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-        grid-template-areas: "info"
-                             "project"
-        }
+  .grid-container {
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      ".       header  ."
+      "nav     nav     nav"
+      "content content content"
+      ".       footer  .";
+  }
+  .header {
+    grid-template-columns: 1fr;
+    grid-template-areas: "banner";
+  }
+  .gallery-grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .show-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "info"
+      "project";
+  }
 }

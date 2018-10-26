@@ -447,7 +447,8 @@
 /* main nav a tags */
 .nav a:hover,
 .nav a:focus,
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
   -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0 1px 3px;
           box-shadow: rgba(0, 0, 0, 0.4) 0 1px 3px;
   -webkit-transition: all 250ms ease;
@@ -513,12 +514,12 @@
 
 .gallery-grid-item:hover p {
   border-radius: 5px 5px 0px 0px;
-  -webkit-animation: fadein .7s;
+  -webkit-animation: fadein 0.7s;
   /* Safari, Chrome and Opera > 12.1 */
   /* Firefox < 16 */
   /* Internet Explorer */
   /* Opera < 12.1 */
-  animation: fadein .7s;
+  animation: fadein 0.7s;
   visibility: visible;
 }
 

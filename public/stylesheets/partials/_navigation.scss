@@ -28,7 +28,8 @@
 
 .nav a:hover,
 .nav a:focus,
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
   box-shadow: $md-card-shadow;
   transition: all 250ms ease;
   color: white;

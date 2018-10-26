@@ -3,10 +3,12 @@
     <div class="show-grid">
       <div class="show-info">
         <span style="position:relative"><a href="javascript:history.back()"><span><i class="fas fa-arrow-left"></i></span> Go Back</a></span>
-        <% if (foundProject.siteUrl) { %>
+        <% if (!foundProject.siteUrl) { %>
+        <h4><%= foundProject.title %></h4>
+        <% } else if (foundProject.siteUrl.includes('github')) { %>
+        <a href='<%= foundProject.siteUrl %>'><h4><%= foundProject.title %> <i class="fab fa-github"></i></h4></a>
+          <% } else { %>
           <a href='<%= foundProject.siteUrl %>'><h4><%= foundProject.title %></h4></a>
-        <% } else { %>
-          <h4><%= foundProject.title %></h4>
           <% } %>
           <p id="project-description"><%= foundProject.description %></p>
       </div>
