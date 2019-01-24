@@ -95,6 +95,19 @@ const projects = {
   ],
   web: [
     {
+      title: "Gloomhaven Enhancement Calculator",
+      imagePaths: [
+        "gec-1.png",
+        "gec-2.png",
+        "gec-3.png",
+        "gec-4.png"
+      ],
+      siteUrl: "https://play.google.com/store/apps/details?id=tomkatcreative.gloomhavenenhancementcalc",
+      description:
+        "Flutter, Dart. Easily calculate the cost of that card enhancement you have your eye on! Includes a full list of available enhancements and their eligible abilities",
+      thumbPath: "gec.png"
+    },
+    {
       title: "Junk Removal Android App",
       imagePaths: [
         "roi-user_auth.gif",
@@ -105,7 +118,7 @@ const projects = {
         "roi-dump_info.gif",
         "roi-archive_journal.gif"
       ],
-      siteUrl: "https://github.com/Garrison88/JunkApp-2.0",
+      siteUrl: "https://play.google.com/store/apps/details?id=com.garrisonthomas.junkapp",
       description:
         "Java, Firebase, Material Design. Logistics app created for a junk removal company in Toronto (https://www.ridofittoronto.com/). Connects to Google Firebase database and features user authentication, real-time data-sync, and Material Design",
       thumbPath: "roi.png"
