@@ -95,7 +95,22 @@ const projects = {
   ],
   web: [
     {
-      title: "Gloomhaven Enhancement Calculator",
+      title: "Takla Fish Tracker",
+      imagePaths: [
+        "tft1.png",
+        "tft2.png",
+        "tft3.png",
+        "tft4.png",
+        "tft5.png",
+        "tft6.png"
+      ],
+      siteUrl: "https://play.google.com/store/apps/details?id=ca.taklafn.taklafishtracker",
+      description:
+        "Flutter, Dart. Track your catches and win prizes! Available on both Android and iOS. Features authentication through Firebase, connects to real-time database, and functions online and offline.",
+      thumbPath: "tft.png"
+    },
+    {
+      title: "Gloomhaven Companion",
       imagePaths: [
         "gec-1.png",
         "gec-2.png",
@@ -108,7 +123,7 @@ const projects = {
       thumbPath: "gec.png"
     },
     {
-      title: "Junk Removal Android App",
+      title: "Junk App 2.0",
       imagePaths: [
         "roi-user_auth.gif",
         "roi-create_journal.gif",
@@ -135,7 +150,7 @@ const projects = {
       siteUrl: "https://github.com/Garrison88/travel-advisories",
       description:
         "Kotlin, Room, REST APIs. Add upcoming trips and view travel advisories.",
-      thumbPath: "travel-advisories.png"
+      thumbPath: "ta.png"
     },
     {
       title: "RGB Guessing Game",
