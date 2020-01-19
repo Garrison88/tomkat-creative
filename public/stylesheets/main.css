@@ -284,7 +284,7 @@
       grid-template-columns: 1fr 6fr 1fr;
   -ms-grid-rows: auto auto 1fr auto;
       grid-template-rows: auto auto 1fr auto;
-      grid-template-areas: ". header  ." ". nav     ." ". content ." ". footer  .";
+      grid-template-areas: ". header  ." ". nav     ." ". content ." ". footer  .";
 }
 
 .header {
@@ -339,7 +339,7 @@
       grid-template-columns: 1fr 6fr 1fr;
   -ms-grid-rows: auto auto;
       grid-template-rows: auto auto;
-      grid-template-areas: ". info ." ". project .";
+      grid-template-areas: ". info ." ". project .";
 }
 
 .show-info {
@@ -366,7 +366,7 @@
       grid-template-columns: 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: "info" "gif";
+      grid-template-areas: "info" "gif";
 }
 
 .contact-info {
@@ -399,7 +399,7 @@
         grid-template-columns: 1fr 10fr 1fr;
     -ms-grid-rows: auto auto 1fr auto;
         grid-template-rows: auto auto 1fr auto;
-        grid-template-areas: ".       header  ." "nav     nav     nav" "content content content" ".       footer  .";
+        grid-template-areas: ".       header  ." "nav     nav     nav" "content content content" ".       footer  .";
   }
   .header {
     -ms-grid-columns: 1fr;
@@ -415,7 +415,7 @@
         grid-template-columns: 1fr;
     -ms-grid-rows: auto auto;
         grid-template-rows: auto auto;
-        grid-template-areas: "info" "project";
+        grid-template-areas: "info" "project";
   }
 }
 
